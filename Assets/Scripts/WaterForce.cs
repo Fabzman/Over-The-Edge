@@ -9,6 +9,7 @@ public class WaterForce : MonoBehaviour {
     public float waterStrength;
     private ConstantForce waterForce;
     public float speedIncrease;
+    //public PlayerController stunState;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class WaterForce : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //if (stunState) return;
             rb.AddForce(transform.right * thrust);
         }
 

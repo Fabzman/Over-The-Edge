@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33917589890860912}
   - component: {fileID: 23610321792710860}
   - component: {fileID: 136811230764820490}
+  - component: {fileID: 136587762603663200}
   - component: {fileID: 54175808561368914}
   - component: {fileID: 75962515188738110}
   - component: {fileID: 114539500094792286}
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerForce: {fileID: 75916435616814460, guid: 74dad7e790d0e794aad91c74e5f4cc18,
     type: 2}
---- !u!136 &136811230764820490
+--- !u!136 &136587762603663200
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,6 +135,19 @@ CapsuleCollider:
   m_GameObject: {fileID: 1656757826303508}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!136 &136811230764820490
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656757826303508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
