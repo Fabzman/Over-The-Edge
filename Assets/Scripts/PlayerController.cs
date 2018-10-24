@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public float thrust;
     public float Speed;
     public Rigidbody rb;
     private Vector3 movement;
@@ -35,6 +36,12 @@ public class PlayerController : MonoBehaviour {
                 stunTimer = 0;
                 stunned = false;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (stunned == true) return;
+            rb.AddForce(transform.right * thrust);
         }
     }
 

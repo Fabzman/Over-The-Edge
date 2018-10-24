@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterForce : MonoBehaviour {
 
-    public float thrust;
+    //public float thrust;
     public Rigidbody rb;
     public float waterStrength;
     private ConstantForce waterForce;
@@ -19,11 +19,11 @@ public class WaterForce : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //if (stunState) return;
-            rb.AddForce(transform.right * thrust);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    //if (stunState) return;
+        //    rb.AddForce(transform.right * thrust);
+        //}
 
         waterStrength += (Time.deltaTime);
         waterForce.force = new Vector3(-1f - Mathf.RoundToInt(waterStrength / speedIncrease) * 0.1f, 0, 0);
