@@ -24,8 +24,8 @@ public class WaterForce : MonoBehaviour {
         //    //if (stunState) return;
         //    rb.AddForce(transform.right * thrust);
         //}
-
-        waterStrength += (Time.deltaTime);
+        if(waterStrength < 70f)
+            waterStrength += (Time.deltaTime);
         waterForce.force = new Vector3(-1f - Mathf.RoundToInt(waterStrength / speedIncrease) * 0.1f, 0, 0);
     }
 

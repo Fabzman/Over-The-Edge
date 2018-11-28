@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 moveSpeed;
     public float stunTimer;
     public bool stunned;
+    private ParticleSystem stars;
 
     // Use this for initialization
     void Start ()
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         stunTimer = 0f;
         stunned = false;
+        stars = GetComponent<ParticleSystem>();
     }
 	
 	// Update is called once per frame
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour {
         {
             stunTimer = 2f;
             stunned = true;
+            stars.Play();
         }
     }
 }

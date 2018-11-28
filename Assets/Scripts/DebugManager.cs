@@ -10,12 +10,12 @@ public class DebugManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            GameManager.instance.GameOver();
+	//void Update ()
+ //   {
+ //       if (Input.GetKeyDown(KeyCode.Space))
+ //           GameManager.instance.GameOver();
 
-        if (Input.GetKeyDown(KeyCode.M))
-            GameManager.instance.IncreaseMud(10);
-	}
+ //       if (Input.GetKeyDown(KeyCode.M))
+ //           GameManager.instance.IncreaseMud(10);
+	//}
 }
