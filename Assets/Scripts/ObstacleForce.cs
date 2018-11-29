@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ObstacleForce : MonoBehaviour {
 
-    public ConstantForce playerForce;
+    private ConstantForce playerForce;
     private ConstantForce obstacleForce;
 
     // Use this for initialization
     void Start ()
     {
+        playerForce = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ConstantForce>();
+        //if(playerForce)
         obstacleForce = GetComponent<ConstantForce>();
 	}
 	

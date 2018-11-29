@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     public float stunTimer;
     public bool stunned;
     private ParticleSystem stars;
+    public ParticleSystem stun;
 
     // Use this for initialization
     void Start ()
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour {
             stunTimer = 2f;
             stunned = true;
             stars.Play();
+            stun.Play();
         }
     }
 }
