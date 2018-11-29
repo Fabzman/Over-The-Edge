@@ -6,7 +6,7 @@ public class Boundary : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        Destroy(GameObject.FindGameObjectWithTag("Obstacle"));
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        //Destroy(GameObject.FindGameObjectWithTag("Obstacle"));
+        Destroy(other.gameObject);
     }
 }
