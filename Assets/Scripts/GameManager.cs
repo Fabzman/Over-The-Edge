@@ -8,11 +8,14 @@ public class GameManager : Singleton <GameManager> {
 
     public float timer;
     public TextMeshPro timerText;
+    public int lives;
+    public float waterStrength;
+    public Vector3 calculatedWaterStrength;
 
     //public int mudLevel = 0;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

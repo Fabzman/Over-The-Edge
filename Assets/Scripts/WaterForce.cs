@@ -6,7 +6,7 @@ public class WaterForce : MonoBehaviour {
 
     //public float thrust;
     public Rigidbody rb;
-    public float waterStrength;
+    //public float waterStrength;
     private ConstantForce waterForce;
     public float speedIncrease;
     //public PlayerController stunState;
@@ -24,9 +24,15 @@ public class WaterForce : MonoBehaviour {
         //    //if (stunState) return;
         //    rb.AddForce(transform.right * thrust);
         //}
-        if(waterStrength < 70f)
-            waterStrength += (Time.deltaTime);
-        waterForce.force = new Vector3(-1f - Mathf.RoundToInt(waterStrength / speedIncrease) * 0.1f, 0, 0);
+        //if(waterStrength < 70f)
+        //    waterStrength += (Time.deltaTime);
+        //waterForce.force = new Vector3(-1f - Mathf.RoundToInt(waterStrength / speedIncrease) * 0.1f, 0, 0);
+        if (GameManager.instance.waterStrength < 70f)
+        {
+            GameManager.instance.waterStrength += (Time.deltaTime);
+            GameManager.instance.calculatedWaterStrength = new Vector3(-1f - Mathf.RoundToInt(GameManager.instance.waterStrength / speedIncrease) * 0.1f, 0, 0);
+        }
+            waterForce.force = GameManager.instance.calculatedWaterStrength;
     }
 
     void FixedUpdate()

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ObstacleForce : MonoBehaviour {
 
-    private ConstantForce playerForce;
+    //private ConstantForce playerForce;
     private ConstantForce obstacleForce;
 
     // Use this for initialization
     void Start ()
     {
-        playerForce = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ConstantForce>();
-        //if(playerForce)
+        //playerForce = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ConstantForce>();
         obstacleForce = GetComponent<ConstantForce>();
 	}
 	
@@ -23,6 +22,8 @@ public class ObstacleForce : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        obstacleForce.force = playerForce.force;
+        //obstacleForce.force = playerForce.force;
+        obstacleForce.force = GameManager.instance.calculatedWaterStrength;
+
     }
 }

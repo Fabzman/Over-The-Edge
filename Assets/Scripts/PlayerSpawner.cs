@@ -4,13 +4,37 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour {
 
+    public Transform player;
+    public GameObject playerTemplate;
+    public GameObject gameOver;
+    public float reviveTimer = 3f;
+
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+		if (!player)
+        {
+            if(GameManager.instance.lives <=0)
+            {
+                //more dead player code e.g.re-load scene, pause menu, game over screen etc.
+                gameOver.gameObject.SetActive(true);
+                return;
+            }
+
+            reviveTimer -= Time.deltaTime;
+
+            if (reviveTimer <= 0)
+            {
+                player = Instantiate(playerTemplate, transform.position, transform.rotation).transform;
+                reviveTimer = 3f;
+            }
+        }
 	}
 }

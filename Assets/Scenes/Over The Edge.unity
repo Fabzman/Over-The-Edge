@@ -377,6 +377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1b0b56a9f0838488b348dd31b16de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &208672677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4290488722578330, guid: 74dad7e790d0e794aad91c74e5f4cc18,
+    type: 2}
+  m_PrefabInternal: {fileID: 997168520}
 --- !u!1 &302612873
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +626,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   timerText: {fileID: 1845058639}
+  lives: 3
+  waterStrength: 0
+  calculatedWaterStrength: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +1029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1052252760}
+  - component: {fileID: 1052252761}
   m_Layer: 9
   m_Name: Player Spawner
   m_TagString: Untagged
@@ -1041,6 +1050,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052252761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1052252759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19075c00805d6c4e9603c112b0df3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 208672677}
+  playerTemplate: {fileID: 1178956199670550, guid: 74dad7e790d0e794aad91c74e5f4cc18,
+    type: 2}
+  gameOver: {fileID: 0}
+  reviveTimer: 3
 --- !u!1 &1056324139
 GameObject:
   m_ObjectHideFlags: 0
