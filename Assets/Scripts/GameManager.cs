@@ -15,9 +15,10 @@ public class GameManager : Singleton <GameManager> {
     //public int mudLevel = 0;
 
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+        
+    }
 	
 	// Update is called once per frame
 	void Update ()
